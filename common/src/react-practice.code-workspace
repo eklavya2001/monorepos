@@ -1,0 +1,22 @@
+{
+  "folders": [
+	{
+		"path": "../../../../../react-practice"
+	},
+	{
+		"path": "../../../../../React js"
+	},
+	{
+		"path": "../../../../../Uber"
+	},
+	{
+		"path": "../../../.."
+	},
+	{
+		"path": "../../../../../js-interview"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "js-interview"
+  }
+}

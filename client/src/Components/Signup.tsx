@@ -3,6 +3,14 @@ import {Link, useNavigate} from 'react-router-dom';
 import {useSetRecoilState} from "recoil";
 import {authState} from "../store/authState.js";
 
+//the problem statement is that when a frontend dev , works on this he doesn't know what type of input data is to be sent to the backend,
+// the purpose is to get the type of data to be sent to the backend that backend actually takes through zod validation, 
+// but how? using zod inference ,
+// abe backend ka auth.ts khol , udhar zod validation wala data dikhega , now hum chahte ha ki frontend ko data usi hisab se bhejna ha ye pata chal jaaye ,
+// to ye kaise hoga ya to type se hoga ya interface se hoga
+// so we make a common package or modules folder in which we keep all the code which can be commonly used by frontend and backend
+
+
 const Signup = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
