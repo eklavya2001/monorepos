@@ -1,6 +1,6 @@
 {
-  "name": "@avyank_eklavya/common",
-  "version": "1.0.3",
+  "name": "ekchua_guide",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,8 +8,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "zod": "^3.24.2"
-  }
+  "description": ""
 }

@@ -3,7 +3,8 @@ import express from 'express';
 import { authenticateJwt, SECRET } from "../middleware/";
 import { User } from "../db";
 import { z } from "zod";
-
+import {signupInput } from '@avyank_eklavya/common'//lekin error aa raha ha, ye error tab chala jayega jab tum common me tsconfig me jake declaration true karke (whick will generate an index.d.ts whcih will only contain a ts file, which will hava all info about ts types), npm publish kar doge naye version ke sath
+import  {add}  from "ekchua_guide"
 // const signupInput = z.object({
 //   username : z.string(),
 //   password: z.string(),
@@ -14,13 +15,29 @@ import { z } from "zod";
 const router = express.Router();
 
   router.post('/signup', async (req, res) => {
+console.log("bro wake up");
+const sum: number = add(4, 5)
+console.log(sum);
 
+
+    // const parsedResponse = signupInput.safeParse(req.body)
+    // if(!parsedResponse.success){
+    //   return res.status(411).json({
+    //     msg: "error while parsing"
+    //   })
+    // }  // now we do like this , niche dekho
     const parsedResponse = signupInput.safeParse(req.body)
+    console.log(parsedResponse);
+    
     if(!parsedResponse.success){
-      return res.status(411).json({
-        msg: "error while parsing"
+      console.log("chal raha ha bhaits");
+      
+      return res.status(403).json({
+        msg : "invalid inputs"
       })
     }
+    // const useranameType= parsedResponse.data?.username
+    // const passwordType = parsedResponse.data?.password
     const { username, password } = req.body;
     const user = await User.findOne({ username });
     if (user) {
